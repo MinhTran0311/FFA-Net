@@ -26,6 +26,7 @@ parser.add_argument('--crop',action='store_true')
 parser.add_argument('--crop_size',type=int,default=240,help='Takes effect when using --crop ')
 parser.add_argument('--no_lr_sche',action='store_true',help='no lr cos schedule')
 parser.add_argument('--perloss',action='store_true',help='perceptual loss')
+parser.add_argument('--dataset_path',type=str,default='./test_imgs')
 
 opt=parser.parse_args()
 opt.device='cuda' if torch.cuda.is_available() else 'cpu'
